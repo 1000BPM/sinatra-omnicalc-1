@@ -41,7 +41,7 @@ get("/payment/results") do
   @monthly_apr = @monthly_apr / 12
 
   #need to make apr display as percent at the end; do NOT use for payment calculation
-  @the_apr = @the_apr.to_fs(:percentage)
+  @the_apr = @the_apr.to_fs(:percentage,{:precision => 4})
 
   @the_yr = params.fetch("yr_user_input").to_i
   @the_months = @the_yr * 12
