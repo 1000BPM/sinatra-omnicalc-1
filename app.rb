@@ -28,6 +28,14 @@ get("/square_root/results") do
   erb(:sqroot_result)
 end
 
+get("/random/new") do
+  erb(:random_new)
+end
+
+get("/random/results") do
+  erb(:random_result)
+end
+
 get("/payment/new") do
   
   erb(:payment_new)
